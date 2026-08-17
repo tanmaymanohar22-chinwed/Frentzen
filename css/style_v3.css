@@ -649,7 +649,6 @@ h2 { font-size: clamp(2rem, 3vw, 2.8rem); }
   pointer-events: none;
   z-index: 2;
   mix-blend-mode: multiply;
-  filter: contrast(1.15) brightness(1.05);
   border-radius: 8px;
 }
 .hero-content, .hero-float { position: relative; z-index: 1; }
