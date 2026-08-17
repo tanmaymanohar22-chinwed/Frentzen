@@ -1,4 +1,4 @@
-﻿:root {
+:root {
   --primary: #800020;
   --secondary: #d4af37;
   --cream: #faf9f6;
@@ -653,6 +653,7 @@ h2 { font-size: clamp(2rem, 3vw, 2.8rem); }
   opacity: 0.95; 
   pointer-events: none;
   z-index: 2;
+  mix-blend-mode: multiply;
 }
 .hero-content, .hero-float { position: relative; z-index: 1; }
 .eyebrow {
