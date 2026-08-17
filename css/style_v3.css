@@ -1,9 +1,9 @@
-﻿:root {
-  --primary: #1a2e1c;
+:root {
+  --primary: #3c4a3e;
   --secondary: #d4af37;
   --cream: #faf9f6;
   --ink: #2f2a25;
-  --muted: #3a4a3c;
+  --muted: #5a6b5c;
   --shadow: rgba(0, 0, 0, 0.16);
 }
 
@@ -650,11 +650,10 @@ h2 { font-size: clamp(2rem, 3vw, 2.8rem); }
   margin: 1.5rem auto 0;
   width: min(160px, 38vw);
   height: auto;
-  opacity: 0.92;
+  opacity: 1;
   pointer-events: none;
   z-index: 2;
-  
-  
+  mix-blend-mode: multiply;
 }
 .hero-content, .hero-float { position: relative; z-index: 1; }
 .eyebrow {
@@ -1167,6 +1166,7 @@ blockquote span { display: block; margin-top: 0.8rem; font-size: 0.95rem; color:
 .contact-section {
   padding-top: 2rem;
 }
+
 
 
 
