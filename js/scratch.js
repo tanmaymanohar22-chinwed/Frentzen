@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+﻿document.addEventListener("DOMContentLoaded", function () {
   const blocks = document.querySelectorAll(".scratch-block");
   if (!blocks.length) return;
 
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function initCanvas() {
       if (wrapper.classList.contains("revealed")) return;
       ctx.globalCompositeOperation = "source-over"; // Reset to draw normal
-      ctx.fillStyle = "#7A1A22"; // Rich burgundy
+      ctx.fillStyle = "#2d4a30"; // Rich burgundy
       ctx.fillRect(0, 0, canvas.width, canvas.height);
     }
 
@@ -133,3 +133,4 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 });
+

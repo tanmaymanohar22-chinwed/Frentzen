@@ -650,11 +650,11 @@ h2 { font-size: clamp(2rem, 3vw, 2.8rem); }
   margin: 1.5rem auto 0;
   width: min(160px, 38vw);
   height: auto;
-  opacity: 0.88;
+  opacity: 0.92;
   pointer-events: none;
   z-index: 2;
   mix-blend-mode: multiply;
-  filter: saturate(0.7) brightness(0.85);
+  filter: contrast(1.1) saturate(0.6) brightness(0.8);
 }
 .hero-content, .hero-float { position: relative; z-index: 1; }
 .eyebrow {
