@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Joel & Joy | Wedding Invitation</title>
+    <meta
+      name="description"
+      content="A graceful Christian wedding invitation."
+    />
+    <meta name="theme-color" content="#800020" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Great+Vibes&family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style_v3.css?v=20260719-1" />
+    <link rel="stylesheet" href="css/animations.css?v=20260719-1" />
+    <link rel="stylesheet" href="css/responsive.css?v=20260715-24" />
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css" as="style" />
+  </head>
+  <body>
+    <div class="welcome-overlay" id="welcomeOverlay" aria-live="polite">
+      <div class="welcome-bg" aria-hidden="true"></div>
+      <div class="welcome-backdrop"></div>
+      <div class="sparkles" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+      <div class="welcome-card">
+        <div class="floral-bloom" aria-hidden="true"></div>
+        <p class="welcome-caption">A CELEBRATION OF OUR PROMISE</p>
+        <h2>Tap to Open</h2>
+        <p class="welcome-subtitle">A graceful invitation to witness our joyful day</p>
+        <button class="welcome-btn" id="openInvitationBtn">Tap to Open</button>
+      </div>
+    </div>
+
+    <div class="loader" id="loader">
+      <div class="loader-ring"></div>
+      <p>Preparing our celebration</p>
+    </div>
+
+    <header class="hero" id="top">
+      <nav class="navbar">
+        <a class="brand" href="#top"><span class="brand-sub" style="font-size: 1.15rem; font-weight: 500; letter-spacing: 1px;">JoYel : His Grace - Our Promise</span></a>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links">
+          <a href="#invitation-details">Invitation</a>
+          <a href="#schedule">Schedule</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#rsvp">RSVP</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+
+      <div class="hero-content">
+
+        <!-- TOP: Bible verse + With Gratitude & Joy (above cross) -->
+        <div class="hero-names-section">
+          <h1 class="hero-bible-heading">
+            "The Lord has done great things for us, and we are glad."
+            <span class="hero-psalm-ref">— Psalms 126:3</span>
+          </h1>
+          <p class="hero-subtitle-joy" style="display: none;">With Gratitude <span class="amp">&amp;</span> Joy</p>
+          
+          <!-- Wedding Bells (Below Bible Verse) -->
+          <img src="images/bells5.jpg" alt="Wedding Bells" class="hero-bells" id="heroBells" />
+        </div>
+
+        <!-- MIDDLE: Invitation text (between cross and rings) -->
+        <div class="hero-invitation-section" style="display: none;">
+          <p class="hero-highlighted-invitation">
+            We are delighted to invite you to share in this sacred day of worship, blessing, and celebration.
+          </p>
+        </div>
+
+
+      </div>
+    </header>
+
+    <main>
+      <section class="section family-section" id="invitation-details">
+        <div class="container reveal">
+          <div class="family-content">
+            <h2 class="family-eyebrow" style="text-transform: none; font-size: 1.5rem; letter-spacing: 0.5px;">Rejoicing in His faithfulness, we</h2>
+            
+            <h2 class="family-names" style="margin-top: 1.5rem; margin-bottom: 2rem;">Joel David <span class="amp" style="display:block; font-size: 2.2rem; margin: 0.5rem 0;">&amp;</span> Shakinah Joy</h2>
+            
+            <p class="family-subheading">
+              Together with our families<br>
+              invite you to celebrate with us<br>
+              as we begin our forever.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="section reveal-section" id="reveal">
+        <div class="container reveal-container">
+          <div class="section-heading reveal">
+            <p class="section-label">Scratch to reveal our date!</p>
+          </div>
+          <!-- The scratch card container -->
+          <div class="scratch-row">
+            <!-- Block 1: 21 -->
+            <div class="scratch-wrapper scratch-block">
+              <div class="scratch-content">
+                <h3>21</h3>
+              </div>
+              <canvas class="scratchCanvas"></canvas>
+            </div>
+            
+            <!-- Block 2: AUG -->
+            <div class="scratch-wrapper scratch-block">
+              <div class="scratch-content">
+                <h3>AUG</h3>
+              </div>
+              <canvas class="scratchCanvas"></canvas>
+            </div>
+            
+            <!-- Block 3: 2026 -->
+            <div class="scratch-wrapper scratch-block">
+              <div class="scratch-content">
+                <h3>2026</h3>
+              </div>
+              <canvas class="scratchCanvas"></canvas>
+            </div>
+          </div>
+
+          <!-- Timer container (initially hidden) -->
+          <div class="countdown-wrapper hidden" id="revealCountdownWrapper">
+            <div class="countdown" id="countdown">
+              <div><span id="days">00</span><small>Days</small></div>
+              <div><span id="hours">00</span><small>Hours</small></div>
+              <div><span id="minutes">00</span><small>Minutes</small></div>
+              <div><span id="seconds">00</span><small>Seconds</small></div>
+            </div>
+            <div id="weddingDayMessage" class="wedding-day-message hidden">
+              <h3>Today is our Special Day! 💍</h3>
+              <p>We can't wait to celebrate along with you!</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section schedule-section" id="schedule">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="section-label">Wedding Schedule</p>
+          </div>
+          <div class="schedule-list">
+            <!-- Winding Path SVG -->
+            <svg class="winding-path-svg" viewBox="0 0 100 1000" preserveAspectRatio="none">
+              <!-- Defs for glowing effect -->
+              <defs>
+                <linearGradient id="gold-glow" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="rgba(212, 175, 55, 0.2)" />
+                  <stop offset="50%" stop-color="rgba(212, 175, 55, 1)" />
+                  <stop offset="100%" stop-color="rgba(212, 175, 55, 0.2)" />
+                </linearGradient>
+                <filter id="glow-filter" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+                  <feMerge>
+                    <feMergeNode in="coloredBlur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                  </feMerge>
+                </filter>
+              </defs>
+              <!-- Base faint path -->
+              <path class="winding-path-base" d="M 50 0 C 80 100, 20 200, 50 300 C 80 400, 20 500, 50 600 C 80 700, 20 800, 50 900 C 80 950, 50 1000, 50 1000" fill="none" stroke="rgba(212, 175, 55, 0.15)" stroke-width="2" />
+              <!-- Lit up path -->
+              <path class="winding-path-active" d="M 50 0 C 80 100, 20 200, 50 300 C 80 400, 20 500, 50 600 C 80 700, 20 800, 50 900 C 80 950, 50 1000, 50 1000" fill="none" stroke="url(#gold-glow)" stroke-width="4" filter="url(#glow-filter)" />
+            </svg>
+            <div class="schedule-card reveal">
+              <div class="schedule-card-inner">
+                <div class="schedule-card-copy">
+                  <span class="schedule-title">Groom entry</span>
+                </div>
+                <div class="schedule-time">10:00 AM</div>
+              </div>
+            </div>
+            <div class="schedule-card reveal">
+              <div class="schedule-card-inner">
+                <div class="schedule-card-copy">
+                  <span class="schedule-title">Songs</span>
+                </div>
+                <div class="schedule-time">10:15 AM</div>
+              </div>
+            </div>
+            <div class="schedule-card reveal">
+              <div class="schedule-card-inner">
+                <div class="schedule-card-copy">
+                  <span class="schedule-title">Bride entry</span>
+                </div>
+                <div class="schedule-time">10:30 AM</div>
+              </div>
+            </div>
+            <div class="schedule-card reveal">
+              <div class="schedule-card-inner">
+                <div class="schedule-card-copy">
+                  <span class="schedule-title">Scripture Reading</span>
+                </div>
+                <div class="schedule-time">10:35 AM</div>
+              </div>
+            </div>
+            <div class="schedule-card reveal">
+              <div class="schedule-card-inner">
+                <div class="schedule-card-copy">
+                  <span class="schedule-title">God's Word</span>
+                  <p>by Bro. David Raj Kumar</p>
+                </div>
+                <div class="schedule-time">10:50 AM</div>
+              </div>
+            </div>
+            <div class="schedule-card reveal">
+              <div class="schedule-card-inner">
+                <div class="schedule-card-copy">
+                  <span class="schedule-title">Wedding ceremony</span>
+                  <p>by Rev. Dr. Aharone</p>
+                </div>
+                <div class="schedule-time">11:20 AM</div>
+              </div>
+            </div>
+            <div class="schedule-card reveal">
+              <div class="schedule-card-inner">
+                <div class="schedule-card-copy">
+                  <span class="schedule-title">Prayer</span>
+                  <p>by all the servants of God</p>
+                </div>
+                <div class="schedule-time">12:10 PM</div>
+              </div>
+            </div>
+            <div class="schedule-card reveal">
+              <div class="schedule-card-inner">
+                <div class="schedule-card-copy">
+                  <span class="schedule-title">Wedding greetings</span>
+                </div>
+                <div class="schedule-time">12:20 PM</div>
+              </div>
+            </div>
+            <div class="schedule-card reveal">
+              <div class="schedule-card-inner">
+                <div class="schedule-card-copy">
+                  <span class="schedule-title">Couple walk along the aisle</span>
+                </div>
+                <div class="schedule-time">12:50 PM</div>
+              </div>
+            </div>
+            <div class="schedule-card reveal">
+              <div class="schedule-card-inner">
+                <div class="schedule-card-copy">
+                  <span class="schedule-title">Reception and Lunch</span>
+                </div>
+                <div class="schedule-time">1:00 PM</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section gallery-section" id="gallery">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="section-label">Memories</p>
+            <h2>Our cherished moments</h2>
+          </div>
+          <div class="gallery-grid">
+            <div class="gallery-card gallery-card--feature reveal" data-image="images/img_2.jpg" data-title="Joel David">
+              <img src="images/img_2.jpg" alt="Joel David" style="object-position: top center;" />
+              <div class="gallery-card-caption">
+                <span>Joel David</span>
+              </div>
+            </div>
+
+            <div class="gallery-card reveal" data-image="images/bride_new.jpg" data-title="Shakinah Joy">
+              <img src="images/bride_new.jpg" alt="Shakinah Joy" style="object-position: top center;" />
+              <div class="gallery-card-caption">
+                <span>Shakinah Joy</span>
+              </div>
+            </div>
+
+            <div class="gallery-card reveal" data-image="images/joyel_logo_new.jpg" data-title="JoYel">
+              <img src="images/joyel_logo_new.jpg" alt="JoYel" style="object-position: center;" />
+              <div class="gallery-card-caption">
+                <span>JoYel</span>
+                <small>His Grace - Our Promise</small>
+              </div>
+            </div>
+
+            <div class="gallery-card reveal" data-image="images/couple_portrait_new.jpg" data-title="Joel & Joy">
+              <img src="images/couple_portrait_new.jpg" alt="Joel and Joy" />
+              <div class="gallery-card-caption">
+                <span>Joel &amp; Joy</span>
+                <small>Our joyful beginning</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section rsvp-section" id="rsvp">
+        <div class="container">
+          <div class="section-heading reveal">
+            <h2>RSVP</h2>
+          </div>
+          <form id="rsvpForm" class="rsvp-form reveal" data-sheet-url="https://script.google.com/macros/s/AKfycbw8heFJ3lE-EYjU7mX8YhQ1C2d_aPptDuD0BX8_ZMBl_4gAyi3bjMFgtuREl9gFYNal/exec" novalidate>
+            <div class="rsvp-form-grid">
+              <input type="text" name="name" placeholder="Full Name" required />
+              <input type="email" name="email" placeholder="Email" required />
+              <input type="tel" name="phone" placeholder="Phone" />
+              <select name="attendance" required>
+                <option value="" disabled selected hidden>Acknowledgement</option>
+                <option value="Attending the ceremony">Attending the ceremony</option>
+                <option value="Regretfully, I cannot">Regretfully, I cannot</option>
+              </select>
+
+            </div>
+            <button type="submit" class="btn btn-primary">Send RSVP</button>
+          </form>
+          <p id="rsvpMessage" class="form-message" role="status" aria-live="polite"></p>
+        </div>
+      </section>
+
+      <section class="section guestbook-section" id="guestbook" style="background: var(--bg-alt);">
+        <div class="container">
+          <div class="section-heading reveal">
+            <h2>Blessings &amp; Greetings</h2>
+          </div>
+          <form id="greetingForm" class="rsvp-form reveal" data-sheet-url="https://script.google.com/macros/s/AKfycbw8heFJ3lE-EYjU7mX8YhQ1C2d_aPptDuD0BX8_ZMBl_4gAyi3bjMFgtuREl9gFYNal/exec" novalidate>
+            <input type="hidden" name="formType" value="Greeting" />
+            <div class="rsvp-form-grid" style="grid-template-columns: 1fr; gap: 1.5rem;">
+              <input type="text" name="name" placeholder="Your Name" required style="width: 100%; max-width: 400px; margin: 0 auto; display: block;" />
+              <textarea name="message" rows="4" placeholder="Blessings & Greetings" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="margin-top: 1.5rem;">Leave a Blessing</button>
+          </form>
+          <p id="greetingMessage" class="form-message" role="status" aria-live="polite"></p>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact">
+        <div class="container">
+          <div class="section-heading reveal">
+            <h2>Venue & Contact</h2>
+          </div>
+          <div class="contact-card reveal">
+            <a href="https://maps.app.goo.gl/VZVizXqRX2xcquNz9" target="_blank" rel="noopener noreferrer" class="venue-map-btn">
+              <i class="fa-solid fa-map-location-dot"></i> Open in Google Maps
+            </a>
+            <div class="venue-details">
+              <p><i class="fa-solid fa-location-dot"></i> Chavas Grand Function Hall, Government Hospital Road, Sulthanabad, Tenali, Andhra Pradesh 522202</p>
+              <p><i class="fa-solid fa-phone"></i> 7032575397,9885430507</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="music-player" aria-label="Background music player">
+      <button id="playPauseBtn" class="music-btn" aria-label="Play or pause music"><i class="fa-solid fa-play"></i></button>
+      <audio id="bgMusic" loop preload="auto">
+        <source src="audio/YTDown.com_YouTube_Christian-Wedding-Songs-2026_Media_tnh8kaEpzws_002_720p (online-video-cutter.com).mp4" type="audio/mp4" />
+      </audio>
+    </div>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close image">&times;</button>
+      <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous image"><i class="fa-solid fa-chevron-left"></i></button>
+      <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next image"><i class="fa-solid fa-chevron-right"></i></button>
+      <div class="lightbox-content">
+        <img id="lightboxImage" src="" alt="Wedding memory" />
+        <p id="lightboxTitle"></p>
+      </div>
+    </div>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <script src="js/main.js?v=20260716-6"></script>
+    <script src="js/scratch.js"></script>
+    <script src="js/gallery.js?v=20260716-1"></script>
+    <script src="js/audio-player.js?v=20260711-5"></script>
+</body>
+</html>
