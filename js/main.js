@@ -179,17 +179,17 @@ async function submitRsvpToPrivateStore(data) {
     throw new Error('RSVP endpoint is not configured.');
   }
 
-  // Google Apps Script requires no-cors mode; data still saves to the sheet
+  // Google Apps Script doPost(e) reads e.parameter, which requires
+  // application/x-www-form-urlencoded (NOT JSON).
+  const formBody = new URLSearchParams(data);
+
   await fetch(url, {
     method: 'POST',
     mode: 'no-cors',
     headers: {
-      'Content-Type': 'application/json',
+      'Content-Type': 'application/x-www-form-urlencoded',
     },
-    body: JSON.stringify({
-      ...data,
-      submittedAt: new Date().toISOString(),
-    }),
+    body: formBody.toString(),
   });
 }
 
@@ -248,7 +248,14 @@ if (greetingForm) {
     }
 
     try {
-      await submitRsvpToPrivateStore(submission);
+      const greetingUrl = greetingForm.dataset.sheetUrl || rsvpSheetUrl;
+      const formBody = new URLSearchParams(submission);
+      await fetch(greetingUrl, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: formBody.toString(),
+      });
       greetingForm.reset();
 
       if (greetingMessage) {
