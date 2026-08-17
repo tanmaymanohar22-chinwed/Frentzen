@@ -1,4 +1,4 @@
-﻿:root {
+:root {
   --primary: #3c4a3e;
   --secondary: #d4af37;
   --cream: #faf9f6;
@@ -107,10 +107,7 @@ a { color: inherit; text-decoration: none; }
   transition: transform 0.6s ease, filter 0.6s ease, opacity 0.6s ease;
   animation: floatUp 2.5s ease-in-out infinite;
 }
-.welcome-overlay.opening .welcome-card {
-  filter: blur(2px);
-  opacity: 0.85;
-}
+.welcome-overlay.opening .welcome-card { opacity: 1; filter: none; }
 .floral-bloom {
   position: absolute;
   inset: 12px;
@@ -648,12 +645,13 @@ h2 { font-size: clamp(2rem, 3vw, 2.8rem); }
   position: relative;
   display: block;
   margin: 1.5rem auto 0;
-  width: min(160px, 38vw);
+  width: min(180px, 42vw);
   height: auto;
   opacity: 1;
   pointer-events: none;
   z-index: 2;
-  
+  mix-blend-mode: multiply;
+  border-radius: 8px;
 }
 .hero-content, .hero-float { position: relative; z-index: 1; }
 .eyebrow {
@@ -1166,6 +1164,7 @@ blockquote span { display: block; margin-top: 0.8rem; font-size: 0.95rem; color:
 .contact-section {
   padding-top: 2rem;
 }
+
 
 
 
