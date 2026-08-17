@@ -109,6 +109,9 @@ if (welcomeOverlay && openInvitationBtn) {
   document.body.classList.add('welcome-visible');
   openInvitationBtn.addEventListener('click', () => {
     welcomeOverlay.classList.add('opening');
+    // Force remove any blur from the card so "You're Invited" is fully readable
+    const card = welcomeOverlay.querySelector('.welcome-card');
+    if (card) { card.style.filter = 'none'; card.style.opacity = '1'; card.style.transform = 'scale(1)'; }
     if (welcomeHeading) welcomeHeading.textContent = "You're Invited! 🎉";
     if (welcomeSubtitle) welcomeSubtitle.textContent = 'Step inside and celebrate with us...';
     openInvitationBtn.style.display = 'none';
