@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --primary: #3c4a3e;
   --secondary: #d4af37;
   --cream: #faf9f6;
@@ -275,7 +275,7 @@ a { color: inherit; text-decoration: none; }
     font-weight: 600 !important;
   }
 
-  /* Countdown ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â compact */
+  /* Countdown ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â compact */
   .countdown {
     margin-top: 0 !important;
     gap: 0.4rem !important;
@@ -397,7 +397,7 @@ img { width: 100%; display: block; object-fit: cover; }
   letter-spacing: 0.02em;
 }
 .story-details p::before {
-  content: 'ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢';
+  content: 'ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¢';
   position: absolute;
   left: 0;
   top: 0.2rem;
@@ -653,7 +653,7 @@ h2 { font-size: clamp(2rem, 3vw, 2.8rem); }
   opacity: 1;
   pointer-events: none;
   z-index: 2;
-  mix-blend-mode: multiply;
+  
 }
 .hero-content, .hero-float { position: relative; z-index: 1; }
 .eyebrow {
@@ -790,7 +790,7 @@ blockquote span { display: block; margin-top: 0.8rem; font-size: 0.95rem; color:
   animation: heartPulse 2s ease-in-out infinite;
 }
 .schedule-list .schedule-rail::before {
-  content: 'ÃƒÂ¢Ã‚ÂÃ‚Â¤ÃƒÂ¯Ã‚Â¸Ã‚Â';
+  content: 'ÃƒÆ’Ã‚Â¢Ãƒâ€šÃ‚ÂÃƒâ€šÃ‚Â¤ÃƒÆ’Ã‚Â¯Ãƒâ€šÃ‚Â¸Ãƒâ€šÃ‚Â';
   display: inline-block;
 }
 
@@ -1166,6 +1166,7 @@ blockquote span { display: block; margin-top: 0.8rem; font-size: 0.95rem; color:
 .contact-section {
   padding-top: 2rem;
 }
+
 
 
 

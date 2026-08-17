@@ -109,18 +109,31 @@ if (welcomeOverlay && openInvitationBtn) {
   document.body.classList.add('welcome-visible');
   openInvitationBtn.addEventListener('click', () => {
     welcomeOverlay.classList.add('opening');
-    if (welcomeHeading) welcomeHeading.textContent = "You're Invited";
-    if (welcomeSubtitle) welcomeSubtitle.textContent = 'Step inside and celebrate with us';
-    openInvitationBtn.textContent = 'Welcome';
+    if (welcomeHeading) welcomeHeading.textContent = "You're Invited! 🎉";
+    if (welcomeSubtitle) welcomeSubtitle.textContent = 'Step inside and celebrate with us...';
+    openInvitationBtn.style.display = 'none';
     if (bgMusic) {
       bgMusic.dataset.userUnlocked = 'true';
       window.startMusic?.();
     }
     createConfetti();
-    setTimeout(() => {
-      welcomeOverlay.classList.add('hidden');
-      document.body.classList.remove('welcome-visible');
-    }, 900);
+
+    // Show "You're Invited" for 5 seconds then open main page
+    let secs = 5;
+    const countEl = document.createElement('p');
+    countEl.style.cssText = 'margin-top:1rem; font-size:0.85rem; color:var(--muted); letter-spacing:0.05em;';
+    countEl.textContent = `Opening in ${secs}...`;
+    welcomeOverlay.querySelector('.welcome-card').appendChild(countEl);
+
+    const interval = setInterval(() => {
+      secs -= 1;
+      countEl.textContent = `Opening in ${secs}...`;
+      if (secs <= 0) {
+        clearInterval(interval);
+        welcomeOverlay.classList.add('hidden');
+        document.body.classList.remove('welcome-visible');
+      }
+    }, 1000);
   });
 }
 
