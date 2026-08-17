@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --primary: #800020;
   --secondary: #d4af37;
   --cream: #faf9f6;
@@ -52,7 +52,7 @@ a { color: inherit; text-decoration: none; }
   width: 100%;
   height: 100%;
   background: url('../images/bg_sage_floral.jpg') center center/cover no-repeat;
-  filter: blur(30px) brightness(0.25) saturate(0.8);
+  filter: none;
   transform: scale(1.05);
   transform-origin: center;
   z-index: 0;
@@ -66,7 +66,7 @@ a { color: inherit; text-decoration: none; }
     background-position: center;
     background-size: cover;
     transform: scale(1.05);
-    filter: blur(25px) brightness(0.25) saturate(0.8);
+    filter: none;
   }
 }
 .welcome-overlay::after {
@@ -75,7 +75,7 @@ a { color: inherit; text-decoration: none; }
   inset: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg, rgba(22, 18, 27, 0.42), rgba(22, 18, 27, 0.72));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2));
   z-index: 1;
 }
 .welcome-overlay.hidden {
@@ -273,7 +273,7 @@ a { color: inherit; text-decoration: none; }
     font-weight: 600 !important;
   }
 
-  /* Countdown — compact */
+  /* Countdown â€” compact */
   .countdown {
     margin-top: 0 !important;
     gap: 0.4rem !important;
@@ -395,7 +395,7 @@ img { width: 100%; display: block; object-fit: cover; }
   letter-spacing: 0.02em;
 }
 .story-details p::before {
-  content: '•';
+  content: 'â€¢';
   position: absolute;
   left: 0;
   top: 0.2rem;
@@ -786,7 +786,7 @@ blockquote span { display: block; margin-top: 0.8rem; font-size: 0.95rem; color:
   animation: heartPulse 2s ease-in-out infinite;
 }
 .schedule-list .schedule-rail::before {
-  content: '❤️';
+  content: 'â¤ï¸';
   display: inline-block;
 }
 
@@ -1162,3 +1162,4 @@ blockquote span { display: block; margin-top: 0.8rem; font-size: 0.95rem; color:
 .contact-section {
   padding-top: 2rem;
 }
+
