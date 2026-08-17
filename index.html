@@ -3,27 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Joel & Joy | Wedding Invitation</title>
-    <meta
-      name="description"
-      content="A graceful Christian wedding invitation."
-    />
+    <title>Frentzen &amp; Suenera | Wedding Invitation</title>
+    <meta name="description" content="A graceful Christian wedding invitation." />
     <meta name="theme-color" content="#800020" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Great+Vibes&family=Montserrat:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="css/style_v3.css?v=20260817-1" />
-    <link rel="stylesheet" href="css/animations.css?v=20260719-1" />
-    <link rel="stylesheet" href="css/responsive.css?v=20260715-24" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Great+Vibes&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style_v3.css?v=20260817-2" />
+    <link rel="stylesheet" href="css/animations.css?v=20260817-2" />
+    <link rel="stylesheet" href="css/responsive.css?v=20260817-2" />
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css" as="style" />
   </head>
   <body>
@@ -36,8 +25,10 @@
       <div class="welcome-card">
         <div class="floral-bloom" aria-hidden="true"></div>
         <p class="welcome-caption">A CELEBRATION OF OUR PROMISE</p>
-        <h2>Tap to Open</h2>
+        <h2 class="welcome-names">FRENTZEN <span class="welcome-weds">weds</span> SUENERA</h2>
+        <p class="welcome-echad">ECHAD</p>
         <p class="welcome-subtitle">A graceful invitation to witness our joyful day</p>
+        <p class="welcome-thankyou">Thank you for being a part of our special day &#9825;</p>
         <button class="welcome-btn" id="openInvitationBtn">Tap to Open</button>
       </div>
     </div>
@@ -49,13 +40,14 @@
 
     <header class="hero" id="top">
       <nav class="navbar">
-        <a class="brand" href="#top"><span class="brand-sub" style="font-size: 1.15rem; font-weight: 500; letter-spacing: 1px;">JoYel : His Grace - Our Promise</span></a>
+        <a class="brand" href="#top"><span class="brand-sub" style="font-size: 1.15rem; font-weight: 500; letter-spacing: 1px;">ECHAD : Two Lives. One Covenant. In Christ.</span></a>
         <button class="nav-toggle" aria-label="Toggle navigation">
           <span></span><span></span><span></span>
         </button>
         <div class="nav-links">
           <a href="#invitation-details">Invitation</a>
-          <a href="#schedule">Schedule</a>
+          <a href="#events">Events</a>
+          <a href="#reception">Reception</a>
           <a href="#gallery">Gallery</a>
           <a href="#rsvp">RSVP</a>
           <a href="#contact">Contact</a>
@@ -63,27 +55,19 @@
       </nav>
 
       <div class="hero-content">
-
-        <!-- TOP: Bible verse + With Gratitude & Joy (above cross) -->
         <div class="hero-names-section">
           <h1 class="hero-bible-heading">
-            "The Lord has done great things for us, and we are glad."
-            <span class="hero-psalm-ref">— Psalms 126:3</span>
+            "I have found the one whom my soul loves."
+            <span class="hero-psalm-ref">� Song of Solomon 3:4</span>
           </h1>
           <p class="hero-subtitle-joy" style="display: none;">With Gratitude <span class="amp">&amp;</span> Joy</p>
-          
-          <!-- Wedding Bells (Below Bible Verse) -->
           <img src="images/bells5.jpg" alt="Wedding Bells" class="hero-bells" id="heroBells" />
         </div>
-
-        <!-- MIDDLE: Invitation text (between cross and rings) -->
         <div class="hero-invitation-section" style="display: none;">
           <p class="hero-highlighted-invitation">
-            We are delighted to invite you to share in this sacred day of worship, blessing, and celebration.
+            We are delighted to invite you to share in this sacred day of worship, blessing and celebration.
           </p>
         </div>
-
-
       </div>
     </header>
 
@@ -92,9 +76,7 @@
         <div class="container reveal">
           <div class="family-content">
             <h2 class="family-eyebrow" style="text-transform: none; font-size: 1.5rem; letter-spacing: 0.5px;">Rejoicing in His faithfulness, we</h2>
-            
-            <h2 class="family-names" style="margin-top: 1.5rem; margin-bottom: 2rem;">Joel David <span class="amp" style="display:block; font-size: 2.2rem; margin: 0.5rem 0;">&amp;</span> Shakinah Joy</h2>
-            
+            <h2 class="family-names" style="margin-top: 1.5rem; margin-bottom: 2rem;">FRENTZEN ROBINSON <span class="amp" style="display:block; font-size: 2.2rem; margin: 0.5rem 0;">&amp;</span> P V SUENERA KATHRINE</h2>
             <p class="family-subheading">
               Together with our families<br>
               invite you to celebrate with us<br>
@@ -103,39 +85,26 @@
           </div>
         </div>
       </section>
+
       <section class="section reveal-section" id="reveal">
         <div class="container reveal-container">
           <div class="section-heading reveal">
             <p class="section-label">Scratch to reveal our date!</p>
           </div>
-          <!-- The scratch card container -->
           <div class="scratch-row">
-            <!-- Block 1: 21 -->
             <div class="scratch-wrapper scratch-block">
-              <div class="scratch-content">
-                <h3>21</h3>
-              </div>
+              <div class="scratch-content"><h3>26</h3></div>
               <canvas class="scratchCanvas"></canvas>
             </div>
-            
-            <!-- Block 2: AUG -->
             <div class="scratch-wrapper scratch-block">
-              <div class="scratch-content">
-                <h3>AUG</h3>
-              </div>
+              <div class="scratch-content"><h3>OCT</h3></div>
               <canvas class="scratchCanvas"></canvas>
             </div>
-            
-            <!-- Block 3: 2026 -->
             <div class="scratch-wrapper scratch-block">
-              <div class="scratch-content">
-                <h3>2026</h3>
-              </div>
+              <div class="scratch-content"><h3>2026</h3></div>
               <canvas class="scratchCanvas"></canvas>
             </div>
           </div>
-
-          <!-- Timer container (initially hidden) -->
           <div class="countdown-wrapper hidden" id="revealCountdownWrapper">
             <div class="countdown" id="countdown">
               <div><span id="days">00</span><small>Days</small></div>
@@ -144,124 +113,68 @@
               <div><span id="seconds">00</span><small>Seconds</small></div>
             </div>
             <div id="weddingDayMessage" class="wedding-day-message hidden">
-              <h3>Today is our Special Day! 💍</h3>
+              <h3>Today is our Special Day! &#128141;</h3>
               <p>We can't wait to celebrate along with you!</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section schedule-section" id="schedule">
+      <section class="section schedule-section" id="events">
         <div class="container">
           <div class="section-heading reveal">
-            <p class="section-label">Wedding Schedule</p>
+            <p class="section-label">Holy Matrimony</p>
+            <h2>Monday, 26 October 2026</h2>
           </div>
-          <div class="schedule-list">
-            <!-- Winding Path SVG -->
-            <svg class="winding-path-svg" viewBox="0 0 100 1000" preserveAspectRatio="none">
-              <!-- Defs for glowing effect -->
-              <defs>
-                <linearGradient id="gold-glow" x1="0%" y1="0%" x2="0%" y2="100%">
-                  <stop offset="0%" stop-color="rgba(212, 175, 55, 0.2)" />
-                  <stop offset="50%" stop-color="rgba(212, 175, 55, 1)" />
-                  <stop offset="100%" stop-color="rgba(212, 175, 55, 0.2)" />
-                </linearGradient>
-                <filter id="glow-filter" x="-50%" y="-50%" width="200%" height="200%">
-                  <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
-                  <feMerge>
-                    <feMergeNode in="coloredBlur"/>
-                    <feMergeNode in="SourceGraphic"/>
-                  </feMerge>
-                </filter>
-              </defs>
-              <!-- Base faint path -->
-              <path class="winding-path-base" d="M 50 0 C 80 100, 20 200, 50 300 C 80 400, 20 500, 50 600 C 80 700, 20 800, 50 900 C 80 950, 50 1000, 50 1000" fill="none" stroke="rgba(212, 175, 55, 0.15)" stroke-width="2" />
-              <!-- Lit up path -->
-              <path class="winding-path-active" d="M 50 0 C 80 100, 20 200, 50 300 C 80 400, 20 500, 50 600 C 80 700, 20 800, 50 900 C 80 950, 50 1000, 50 1000" fill="none" stroke="url(#gold-glow)" stroke-width="4" filter="url(#glow-filter)" />
-            </svg>
-            <div class="schedule-card reveal">
-              <div class="schedule-card-inner">
-                <div class="schedule-card-copy">
-                  <span class="schedule-title">Groom entry</span>
-                </div>
-                <div class="schedule-time">10:00 AM</div>
-              </div>
-            </div>
-            <div class="schedule-card reveal">
-              <div class="schedule-card-inner">
-                <div class="schedule-card-copy">
-                  <span class="schedule-title">Songs</span>
-                </div>
-                <div class="schedule-time">10:15 AM</div>
-              </div>
-            </div>
-            <div class="schedule-card reveal">
-              <div class="schedule-card-inner">
-                <div class="schedule-card-copy">
-                  <span class="schedule-title">Bride entry</span>
-                </div>
-                <div class="schedule-time">10:30 AM</div>
-              </div>
-            </div>
-            <div class="schedule-card reveal">
-              <div class="schedule-card-inner">
-                <div class="schedule-card-copy">
-                  <span class="schedule-title">Scripture Reading</span>
-                </div>
-                <div class="schedule-time">10:35 AM</div>
-              </div>
-            </div>
-            <div class="schedule-card reveal">
-              <div class="schedule-card-inner">
-                <div class="schedule-card-copy">
-                  <span class="schedule-title">God's Word</span>
-                  <p>by Bro. David Raj Kumar</p>
-                </div>
-                <div class="schedule-time">10:50 AM</div>
-              </div>
-            </div>
-            <div class="schedule-card reveal">
-              <div class="schedule-card-inner">
-                <div class="schedule-card-copy">
-                  <span class="schedule-title">Wedding ceremony</span>
-                  <p>by Rev. Dr. Aharone</p>
-                </div>
-                <div class="schedule-time">11:20 AM</div>
-              </div>
-            </div>
-            <div class="schedule-card reveal">
-              <div class="schedule-card-inner">
-                <div class="schedule-card-copy">
-                  <span class="schedule-title">Prayer</span>
-                  <p>by all the servants of God</p>
-                </div>
-                <div class="schedule-time">12:10 PM</div>
-              </div>
-            </div>
-            <div class="schedule-card reveal">
-              <div class="schedule-card-inner">
-                <div class="schedule-card-copy">
-                  <span class="schedule-title">Wedding greetings</span>
-                </div>
-                <div class="schedule-time">12:20 PM</div>
-              </div>
-            </div>
-            <div class="schedule-card reveal">
-              <div class="schedule-card-inner">
-                <div class="schedule-card-copy">
-                  <span class="schedule-title">Couple walk along the aisle</span>
-                </div>
-                <div class="schedule-time">12:50 PM</div>
-              </div>
-            </div>
-            <div class="schedule-card reveal">
-              <div class="schedule-card-inner">
-                <div class="schedule-card-copy">
-                  <span class="schedule-title">Reception and Lunch</span>
-                </div>
-                <div class="schedule-time">1:00 PM</div>
-              </div>
-            </div>
+          <div class="contact-card reveal" style="text-align: center; padding: 2rem;">
+            <p style="font-size: 2rem; font-weight: 700; color: var(--primary); font-family: 'Cormorant Garamond', serif; margin-bottom: 0.3rem;">4:00 PM</p>
+            <p style="font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.5rem;">at</p>
+            <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 700; color: var(--primary); margin-bottom: 0.5rem;">ST. GEORGE'S CATHEDRAL, CSI</h3>
+            <p style="color: var(--muted); margin-bottom: 1.5rem;">Cathedral Road, Gopalapuram<br>Chennai, Tamil Nadu 600086</p>
+            <a href="https://maps.google.com/?q=3723+V4+Chennai,+Tamil+Nadu,+India" target="_blank" rel="noopener noreferrer" class="venue-map-btn">
+              <i class="fa-solid fa-map-location-dot"></i> Get Directions
+            </a>
+          </div>
+
+          <div class="section-heading reveal" style="margin-top: 3rem;">
+            <p class="section-label">The Celebration Continues...</p>
+            <h2>Evening Gathering</h2>
+          </div>
+          <div class="contact-card reveal" style="text-align: center; padding: 2rem;">
+            <p style="font-size: 1.1rem; font-style: italic; color: var(--muted); margin-bottom: 1rem;">Followed by an evening gathering at</p>
+            <p style="font-size: 2rem; font-weight: 700; color: var(--primary); font-family: 'Cormorant Garamond', serif; margin-bottom: 0.3rem;">7:00 PM</p>
+            <p style="font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.5rem;">at</p>
+            <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 700; color: var(--primary); margin-bottom: 0.5rem;">LITE AUDITORIUM</h3>
+            <p style="color: var(--muted); margin-bottom: 1.5rem;">17, Balfour Road<br>Behind CSI Bain Matric Higher Secondary School<br>Kellys, Kilpauk, Chennai, Tamil Nadu 600010</p>
+            <a href="https://maps.google.com/?q=36MW+53+Chennai,+Tamil+Nadu,+India" target="_blank" rel="noopener noreferrer" class="venue-map-btn">
+              <i class="fa-solid fa-map-location-dot"></i> Get Directions
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section verse-section" id="reception">
+        <div class="container">
+          <div class="section-heading reveal" style="margin-bottom: 1.5rem;">
+            <h2 style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: clamp(1.3rem, 3vw, 1.8rem); font-weight: 600; color: var(--primary); max-width: 600px; margin: 0 auto 0.5rem; line-height: 1.6;">
+              "And now these three remain:<br>faith, hope and love.<br>But the greatest of these is love."
+            </h2>
+            <p style="font-size: 0.85rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted);">1 Corinthians 13:13</p>
+          </div>
+          <div class="section-heading reveal" style="margin-top: 2rem;">
+            <p class="section-label">Our Wedding Reception</p>
+            <h2>FRENTZEN &amp; SUENERA</h2>
+            <p style="color: var(--muted); font-style: italic; margin-top: 0.5rem;">Together with our families,<br>we invite you to join us once again<br>as we celebrate this beautiful beginning.</p>
+          </div>
+          <div class="contact-card reveal" style="text-align: center; padding: 2rem; margin-top: 1.5rem;">
+            <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--muted); font-weight: 500; margin-bottom: 0.3rem;">Friday, 30 October 2026</h3>
+            <p style="font-size: 2rem; font-weight: 700; color: var(--primary); font-family: 'Cormorant Garamond', serif; margin-bottom: 0.3rem;">5:00 PM - 9:00 PM</p>
+            <p style="font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.5rem;">at</p>
+            <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 700; color: var(--primary); margin-bottom: 0.5rem;">CSI CHURCH PARISH HALL</h3>
+            <p style="color: var(--muted); margin-bottom: 1.5rem;">Kallankuzhi<br>Kanyakumari District<br>Tamil Nadu 629166</p>
+            <a href="https://maps.google.com/?q=8832+7JQ+Kallankuzhi+Tamil+Nadu+629166" target="_blank" rel="noopener noreferrer" class="venue-map-btn">
+              <i class="fa-solid fa-map-location-dot"></i> Get Directions
+            </a>
           </div>
         </div>
       </section>
@@ -273,32 +186,25 @@
             <h2>Our cherished moments</h2>
           </div>
           <div class="gallery-grid">
-            <div class="gallery-card gallery-card--feature reveal" data-image="images/img_2.jpg" data-title="Joel David">
-              <img src="images/img_2.jpg" alt="Joel David" style="object-position: top center;" />
+            <div class="gallery-card gallery-card--feature reveal" data-image="images/img_2.jpg" data-title="Frentzen Robinson">
+              <img src="images/img_2.jpg" alt="Frentzen Robinson" style="object-position: top center;" />
+              <div class="gallery-card-caption"><span>Frentzen Robinson</span></div>
+            </div>
+            <div class="gallery-card reveal" data-image="images/bride_new.jpg" data-title="P V Suenera Kathrine">
+              <img src="images/bride_new.jpg" alt="P V Suenera Kathrine" style="object-position: top center;" />
+              <div class="gallery-card-caption"><span>P V Suenera Kathrine</span></div>
+            </div>
+            <div class="gallery-card reveal" data-image="images/joyel_logo_new.jpg" data-title="ECHAD">
+              <img src="images/joyel_logo_new.jpg" alt="ECHAD" style="object-position: center;" />
               <div class="gallery-card-caption">
-                <span>Joel David</span>
+                <span>ECHAD</span>
+                <small>Two Lives. One Covenant. In Christ.</small>
               </div>
             </div>
-
-            <div class="gallery-card reveal" data-image="images/bride_new.jpg" data-title="Shakinah Joy">
-              <img src="images/bride_new.jpg" alt="Shakinah Joy" style="object-position: top center;" />
+            <div class="gallery-card reveal" data-image="images/couple_portrait_new.jpg" data-title="Frentzen &amp; Suenera">
+              <img src="images/couple_portrait_new.jpg" alt="Frentzen and Suenera" />
               <div class="gallery-card-caption">
-                <span>Shakinah Joy</span>
-              </div>
-            </div>
-
-            <div class="gallery-card reveal" data-image="images/joyel_logo_new.jpg" data-title="JoYel">
-              <img src="images/joyel_logo_new.jpg" alt="JoYel" style="object-position: center;" />
-              <div class="gallery-card-caption">
-                <span>JoYel</span>
-                <small>His Grace - Our Promise</small>
-              </div>
-            </div>
-
-            <div class="gallery-card reveal" data-image="images/couple_portrait_new.jpg" data-title="Joel & Joy">
-              <img src="images/couple_portrait_new.jpg" alt="Joel and Joy" />
-              <div class="gallery-card-caption">
-                <span>Joel &amp; Joy</span>
+                <span>Frentzen &amp; Suenera</span>
                 <small>Our joyful beginning</small>
               </div>
             </div>
@@ -309,36 +215,49 @@
       <section class="section rsvp-section" id="rsvp">
         <div class="container">
           <div class="section-heading reveal">
+            <p class="section-label">Will You Be Joining Us?</p>
             <h2>RSVP</h2>
           </div>
-          <form id="rsvpForm" class="rsvp-form reveal" data-sheet-url="https://script.google.com/macros/s/AKfycbw8heFJ3lE-EYjU7mX8YhQ1C2d_aPptDuD0BX8_ZMBl_4gAyi3bjMFgtuREl9gFYNal/exec" novalidate>
+          <form id="rsvpForm" class="rsvp-form reveal" data-sheet-url="https://script.google.com/macros/s/FRENTZEN_SHEET_URL_HERE/exec" novalidate>
             <div class="rsvp-form-grid">
               <input type="text" name="name" placeholder="Full Name" required />
               <input type="email" name="email" placeholder="Email" required />
               <input type="tel" name="phone" placeholder="Phone" />
               <select name="attendance" required>
-                <option value="" disabled selected hidden>Acknowledgement</option>
-                <option value="Attending the ceremony">Attending the ceremony</option>
+                <option value="" disabled selected hidden>Will you be joining us?</option>
+                <option value="Attending the Wedding - Chennai">Attending the Wedding - Chennai</option>
+                <option value="Attending the Reception - Kanyakumari">Attending the Reception - Kanyakumari</option>
+                <option value="Attending Both">Attending Both</option>
                 <option value="Regretfully, I cannot">Regretfully, I cannot</option>
               </select>
-
+              <input type="number" name="guests" placeholder="Number of Guests" min="1" max="20" />
             </div>
             <button type="submit" class="btn btn-primary">Send RSVP</button>
           </form>
           <p id="rsvpMessage" class="form-message" role="status" aria-live="polite"></p>
+          <div class="reveal" style="margin-top: 2rem; display: flex; flex-direction: column; gap: 0.8rem; align-items: center; text-align: center;">
+            <p style="color: var(--muted); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em;">Or contact us directly</p>
+            <a href="tel:+919790847022" style="display: flex; align-items: center; gap: 0.5rem; color: var(--primary); font-weight: 600;">
+              <i class="fa-brands fa-whatsapp"></i> Wedding / Chennai RSVP: +91 97908 47022
+            </a>
+            <a href="tel:+919600566569" style="display: flex; align-items: center; gap: 0.5rem; color: var(--primary); font-weight: 600;">
+              <i class="fa-brands fa-whatsapp"></i> Wedding Reception RSVP: +91 96005 66569
+            </a>
+          </div>
         </div>
       </section>
 
       <section class="section guestbook-section" id="guestbook" style="background: var(--bg-alt);">
         <div class="container">
           <div class="section-heading reveal">
-            <h2>Blessings &amp; Greetings</h2>
+            <p class="section-label">Blessings &amp; Greetings</p>
+            <h2>Leave a blessing for Frentzen &amp; Suenera</h2>
           </div>
-          <form id="greetingForm" class="rsvp-form reveal" data-sheet-url="https://script.google.com/macros/s/AKfycbw8heFJ3lE-EYjU7mX8YhQ1C2d_aPptDuD0BX8_ZMBl_4gAyi3bjMFgtuREl9gFYNal/exec" novalidate>
+          <form id="greetingForm" class="rsvp-form reveal" data-sheet-url="https://script.google.com/macros/s/FRENTZEN_SHEET_URL_HERE/exec" novalidate>
             <input type="hidden" name="formType" value="Greeting" />
             <div class="rsvp-form-grid" style="grid-template-columns: 1fr; gap: 1.5rem;">
               <input type="text" name="name" placeholder="Your Name" required style="width: 100%; max-width: 400px; margin: 0 auto; display: block;" />
-              <textarea name="message" rows="4" placeholder="Blessings & Greetings" required></textarea>
+              <textarea name="message" rows="4" placeholder="Your Blessing" required></textarea>
             </div>
             <button type="submit" class="btn btn-primary" style="margin-top: 1.5rem;">Leave a Blessing</button>
           </form>
@@ -349,17 +268,43 @@
       <section class="section contact-section" id="contact">
         <div class="container">
           <div class="section-heading reveal">
-            <h2>Venue & Contact</h2>
+            <h2>Venue &amp; Contact</h2>
           </div>
           <div class="contact-card reveal">
-            <a href="https://maps.app.goo.gl/VZVizXqRX2xcquNz9" target="_blank" rel="noopener noreferrer" class="venue-map-btn">
-              <i class="fa-solid fa-map-location-dot"></i> Open in Google Maps
+            <a href="https://maps.google.com/?q=3723+V4+Chennai,+Tamil+Nadu,+India" target="_blank" rel="noopener noreferrer" class="venue-map-btn">
+              <i class="fa-solid fa-map-location-dot"></i> ST. GEORGE'S CATHEDRAL, CSI
             </a>
             <div class="venue-details">
-              <p><i class="fa-solid fa-location-dot"></i> Chavas Grand Function Hall, Government Hospital Road, Sulthanabad, Tenali, Andhra Pradesh 522202</p>
-              <p><i class="fa-solid fa-phone"></i> 7032575397,9885430507</p>
+              <p><i class="fa-solid fa-location-dot"></i> Cathedral Road, Gopalapuram, Chennai, Tamil Nadu 600086</p>
+              <p><i class="fa-solid fa-phone"></i> +91 97908 47022</p>
             </div>
           </div>
+          <div class="contact-card reveal" style="margin-top: 1.5rem;">
+            <a href="https://maps.google.com/?q=8832+7JQ+Kallankuzhi+Tamil+Nadu+629166" target="_blank" rel="noopener noreferrer" class="venue-map-btn">
+              <i class="fa-solid fa-map-location-dot"></i> CSI CHURCH PARISH HALL
+            </a>
+            <div class="venue-details">
+              <p><i class="fa-solid fa-location-dot"></i> Kallankuzhi, Kanyakumari District, Tamil Nadu 629166</p>
+              <p><i class="fa-solid fa-phone"></i> +91 96005 66569</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section family-section" id="echad-closing" style="text-align: center; padding: 4rem 1.5rem;">
+        <div class="container reveal">
+          <p style="font-family: 'Great Vibes', cursive; font-size: clamp(3rem, 8vw, 5.5rem); color: var(--primary); margin-bottom: 0.3rem; line-height: 1;">ECHAD</p>
+          <h2 style="font-family: 'Cormorant Garamond', serif; font-size: clamp(1.4rem, 3.5vw, 2rem); font-weight: 600; color: var(--primary); letter-spacing: 0.05em; margin: 0.5rem 0;">FRENTZEN &amp; SUENERA</h2>
+          <p style="font-style: italic; color: var(--muted); font-size: 1rem; margin: 0.5rem 0 2rem;">Two lives. One covenant. In Christ.</p>
+          <div style="width: 60px; height: 2px; background: var(--secondary); margin: 1.5rem auto;"></div>
+          <p style="font-family: 'Cormorant Garamond', serif; font-size: clamp(1.1rem, 2.5vw, 1.4rem); font-style: italic; color: var(--primary); max-width: 500px; margin: 0 auto 0.5rem; line-height: 1.7;">
+            "Therefore what God has joined together,<br>let no one separate."
+          </p>
+          <p style="font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin-bottom: 2rem;">Mark 10:9</p>
+          <p style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--secondary); letter-spacing: 0.2em; margin-bottom: 1.5rem;">26 &middot; 10 &middot; 2026</p>
+          <div style="width: 60px; height: 2px; background: var(--secondary); margin: 1.5rem auto;"></div>
+          <p style="color: var(--muted); font-size: 0.95rem;">With love and best wishes from</p>
+          <p style="font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 700; color: var(--primary); letter-spacing: 0.1em; margin-top: 0.3rem;">FAMILY &amp; FRIENDS</p>
         </div>
       </section>
     </main>
@@ -383,9 +328,9 @@
 
     <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
 
-    <script src="js/main.js?v=20260716-6"></script>
+    <script src="js/main.js?v=20260817-2"></script>
     <script src="js/scratch.js"></script>
-    <script src="js/gallery.js?v=20260716-1"></script>
-    <script src="js/audio-player.js?v=20260711-5"></script>
+    <script src="js/gallery.js?v=20260817-2"></script>
+    <script src="js/audio-player.js?v=20260817-2"></script>
 </body>
 </html>
