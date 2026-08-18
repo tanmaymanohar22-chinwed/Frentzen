@@ -112,8 +112,22 @@ if (welcomeOverlay && openInvitationBtn) {
     // Force remove any blur from the card so "You're Invited" is fully readable
     const card = welcomeOverlay.querySelector('.welcome-card');
     if (card) { card.style.filter = 'none'; card.style.opacity = '1'; card.style.transform = 'scale(1)'; }
-    if (welcomeHeading) welcomeHeading.textContent = "You're Invited! 🎉";
-    if (welcomeSubtitle) welcomeSubtitle.textContent = 'Step inside and celebrate with us...';
+    if (welcomeHeading) welcomeHeading.textContent = "YOU'RE INVITED!";
+    
+    // Change E C H A D to ECHAD
+    const echadText = welcomeOverlay.querySelector('.welcome-echad');
+    if (echadText) echadText.textContent = 'ECHAD';
+
+    // Create the subtitle for "Step inside..." after ECHAD
+    const subtitleEl = document.createElement('p');
+    subtitleEl.style.cssText = 'font-size: 1rem; color: var(--ink); margin-top: 1rem;';
+    subtitleEl.textContent = 'Step inside and celebrate with us...';
+    if (echadText) {
+      echadText.after(subtitleEl);
+    } else if (welcomeHeading) {
+      welcomeHeading.after(subtitleEl);
+    }
+    
     openInvitationBtn.style.display = 'none';
     if (bgMusic) {
       bgMusic.dataset.userUnlocked = 'true';
