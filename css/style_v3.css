@@ -96,8 +96,9 @@ a { color: inherit; text-decoration: none; }
   position: relative;
   z-index: 3;
   text-align: center;
+  width: 90%;
   max-width: 560px;
-  padding: 2.5rem;
+  padding: 2.5rem 1.5rem;
   border-radius: 30px;
   background: rgba(255,255,255,0.98);
   color: var(--ink);
@@ -123,7 +124,7 @@ a { color: inherit; text-decoration: none; }
 }
 .welcome-card h2 {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(2.3rem, 4vw, 3.3rem);
+  font-size: clamp(1.8rem, 5vw, 2.8rem); /* Decreased to prevent wrapping/overflow on phones */
   margin-bottom: 0.8rem;
   color: var(--primary);
 }
