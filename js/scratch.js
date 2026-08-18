@@ -1,4 +1,4 @@
-﻿document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
   const blocks = document.querySelectorAll(".scratch-block");
   if (!blocks.length) return;
 
@@ -32,8 +32,26 @@
     function initCanvas() {
       if (wrapper.classList.contains("revealed")) return;
       ctx.globalCompositeOperation = "source-over"; // Reset to draw normal
-      ctx.fillStyle = "#2d4a30"; // Rich burgundy
+      
+      // Sage Green gradient background
+      const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+      gradient.addColorStop(0, '#a9b59a');
+      gradient.addColorStop(1, '#8e997f');
+      ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      // Add subtle golden foil streaks
+      ctx.strokeStyle = "rgba(212, 175, 55, 0.4)";
+      ctx.lineWidth = 2;
+      for (let i = 0; i < 20; i++) {
+        ctx.beginPath();
+        const startX = Math.random() * (canvas.width * 2) - canvas.width;
+        const startY = Math.random() * canvas.height;
+        ctx.moveTo(startX, startY);
+        // Draw angled streaks
+        ctx.lineTo(startX + 150, startY - 150);
+        ctx.stroke();
+      }
     }
 
     function getMousePos(evt) {

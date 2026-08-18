@@ -1055,9 +1055,9 @@ blockquote span { display: block; margin-top: 0.8rem; font-size: 0.95rem; color:
   margin: 0;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
-  background: rgba(255, 255, 255, 0.85);
-  border: 1px solid rgba(212, 175, 55, 0.45);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  background: radial-gradient(ellipse at center, rgba(253, 252, 248, 1) 40%, rgba(253, 252, 248, 0.6) 80%);
+  border: 1px solid rgba(212, 175, 55, 0.4);
 }
 .scratch-content {
   position: absolute;
@@ -1065,14 +1065,14 @@ blockquote span { display: block; margin-top: 0.8rem; font-size: 0.95rem; color:
   display: flex;
   align-items: center;
   justify-content: center;
-  background: transparent;
+  z-index: 1;
 }
 .scratch-content h3 {
-  font-size: clamp(1.6rem, 6vw, 2.8rem);
-  color: var(--primary);
-  margin: 0;
   font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 7vw, 3rem);
   font-weight: 700;
+  color: #2c3b2d;
+  margin: 0;
   opacity: 0;
   transform: scale(0.9);
   transition: opacity 0.5s ease, transform 0.5s ease;
