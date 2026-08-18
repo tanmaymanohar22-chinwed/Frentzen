@@ -109,25 +109,51 @@ if (welcomeOverlay && openInvitationBtn) {
   document.body.classList.add('welcome-visible');
   openInvitationBtn.addEventListener('click', () => {
     welcomeOverlay.classList.add('opening');
-    // Force remove any blur from the card so "You're Invited" is fully readable
     const card = welcomeOverlay.querySelector('.welcome-card');
     if (card) { card.style.filter = 'none'; card.style.opacity = '1'; card.style.transform = 'scale(1)'; }
-    if (welcomeHeading) welcomeHeading.textContent = "YOU'RE INVITED!";
     
-    // Change E C H A D to ECHAD
-    const echadText = welcomeOverlay.querySelector('.welcome-echad');
-    if (echadText) echadText.textContent = 'ECHAD';
+    // Animate the text changes: fade out slightly, change text, then pop in
+    const elementsToAnimate = [welcomeHeading, welcomeOverlay.querySelector('.welcome-echad')].filter(Boolean);
+    elementsToAnimate.forEach(el => {
+      el.style.transition = 'all 0.3s ease';
+      el.style.opacity = '0';
+      el.style.transform = 'scale(0.9)';
+    });
 
-    // Create the subtitle for "Step inside..." after ECHAD
-    const subtitleEl = document.createElement('p');
-    subtitleEl.style.cssText = 'font-size: 1rem; color: var(--ink); margin-top: 1rem;';
-    subtitleEl.textContent = 'Step inside and celebrate with us...';
-    if (echadText) {
-      echadText.after(subtitleEl);
-    } else if (welcomeHeading) {
-      welcomeHeading.after(subtitleEl);
-    }
-    
+    setTimeout(() => {
+      if (welcomeHeading) {
+        welcomeHeading.textContent = "YOU'RE INVITED!";
+        welcomeHeading.style.transition = 'all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+        welcomeHeading.style.opacity = '1';
+        welcomeHeading.style.transform = 'scale(1)';
+      }
+      
+      const echadText = welcomeOverlay.querySelector('.welcome-echad');
+      if (echadText) {
+        echadText.textContent = 'ECHAD';
+        echadText.style.transition = 'all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+        echadText.style.opacity = '1';
+        echadText.style.transform = 'scale(1)';
+      }
+
+      // Create the subtitle for "Step inside..."
+      const subtitleEl = document.createElement('p');
+      subtitleEl.style.cssText = 'font-size: 1rem; color: var(--ink); margin-top: 1rem; opacity: 0; transform: translateY(10px); transition: all 0.6s ease 0.2s;';
+      subtitleEl.textContent = 'Step inside and celebrate with us...';
+      if (echadText) {
+        echadText.parentNode.insertBefore(subtitleEl, echadText.nextSibling);
+      } else if (welcomeHeading) {
+        welcomeHeading.parentNode.insertBefore(subtitleEl, welcomeHeading.nextSibling);
+      }
+      
+      // Trigger animation for the new subtitle
+      requestAnimationFrame(() => {
+        subtitleEl.style.opacity = '1';
+        subtitleEl.style.transform = 'translateY(0)';
+      });
+
+    }, 300); // 300ms fade out before changing text
+
     openInvitationBtn.style.display = 'none';
     if (bgMusic) {
       bgMusic.dataset.userUnlocked = 'true';
@@ -135,12 +161,13 @@ if (welcomeOverlay && openInvitationBtn) {
     }
     createConfetti();
 
-    // Show "You're Invited" for 5 seconds then open main page
-    let secs = 5;
+    // Show "You're Invited" for 3 seconds then open main page
+    let secs = 3;
     const countEl = document.createElement('p');
-    countEl.style.cssText = 'margin-top:1rem; font-size:0.85rem; color:var(--muted); letter-spacing:0.05em;';
+    countEl.style.cssText = 'margin-top:1.5rem; font-size:0.85rem; color:var(--muted); letter-spacing:0.05em; opacity: 0; transition: opacity 1s ease;';
     countEl.textContent = `Opening in ${secs}...`;
-    welcomeOverlay.querySelector('.welcome-card').appendChild(countEl);
+    card.appendChild(countEl);
+    requestAnimationFrame(() => countEl.style.opacity = '1');
 
     const interval = setInterval(() => {
       secs -= 1;
