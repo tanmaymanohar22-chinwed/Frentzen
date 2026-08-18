@@ -462,8 +462,13 @@ h1, h2, h3 {
   position: relative;
   background: #fefbf6 url('../images/bg_floral_blank.jpg') center center/cover no-repeat;
   text-align: center;
-  padding: 8rem 0 2rem 0; /* Reduced bottom padding to remove gap to schedule */
+  padding: 4rem 1.5rem; /* Adjusted padding for flex centering */
   color: var(--ink);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .family-section::before {
   content: '';
