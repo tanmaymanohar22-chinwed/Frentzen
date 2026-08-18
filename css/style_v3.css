@@ -144,7 +144,7 @@ a { color: inherit; text-decoration: none; }
 }
 .welcome-names {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1.4rem, 4vw, 2rem);
+  font-size: clamp(1.1rem, 3.5vw, 1.7rem); /* Decreased by ~5px */
   font-weight: 700;
   color: var(--primary);
   letter-spacing: 0.05em;
