@@ -474,7 +474,7 @@ h1, h2, h3 {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(254, 251, 246, 0.88); /* Significantly fades the background to make it duller */
+  /* Removed the heavy fade background so the floral is completely crisp and clear */
   z-index: 0;
 }
 .family-content {
