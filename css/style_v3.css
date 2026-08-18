@@ -579,16 +579,15 @@ h2 { font-size: clamp(2rem, 3vw, 2.8rem); }
   margin: 5px 0;
 }
 .hero {
-  width: 100%;
-  aspect-ratio: 848 / 1264;
+  min-height: 80vh; /* Reduced from 100vh so the scratch section peeks up */
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   text-align: center;
-  padding: 0;
-  background: #fefbf6 url('../images/bg_sage_floral.jpg') center center/cover no-repeat;
+  padding: 2rem 1.5rem; /* Symmetrical padding for perfect flexbox centering */
+  background: #fefbf6 url('../images/bg_floral_blank.jpg') center center/cover no-repeat;
   color: var(--ink);
 }
 .hero::before {
